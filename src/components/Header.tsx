@@ -1,16 +1,25 @@
+const Header = () => {
+  return (
+    <header className="flex py-5 justify-center px-4 text-black font-semibold p-5 bg-[#FF9FFC]">
+      <nav className="flex space-x-8 font-bold">
+        <a href="/" className=" hover:text-gray-400">
+          Home
+        </a>
+        <a href="/about" className=" hover:text-gray-400">
+          About
+        </a>
+        <a href="/skill" className=" hover:text-gray-400">
+          Skills
+        </a>
+        <a href="/project" className=" hover:text-gray-400">
+          Projects
+        </a>
+        <a href="/contact" className=" hover:text-gray-400">
+          Contacts
+        </a>
+      </nav>
+    </header>
+  );
+};
 
-const Header =() => {
-    return (
-        <header className='flex py-5 justify-center px-4 text-gray-600 font-semibold p-5 '>
-            <nav className='flex space-x-8 hover:text-gray-400 font-bold'>
-                <a href="/" >Home</a>
-                <a href="/about">About</a>
-                <a href="">Projects</a>
-                <a href="">Contacts</a>
-            </nav>
-        </header>
-    )
-}
-
-
-export default Header
+export default Header;

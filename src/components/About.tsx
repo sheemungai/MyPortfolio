@@ -4,7 +4,7 @@ export default function AboutMe() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center px-4 pt-2 pb-6 max-w-6xl mx-auto">
       <div className="order-2 md:order-1">
-        <h1 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6">About Me</h1>
+        <h1 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-[#F39237]">About Me</h1>
         <BlurText
           text="Hi, I'm Sheilla Mungai, a passionate fullstack web developer.
 I am a dedicated and skilled fullstack web developer with a passion
