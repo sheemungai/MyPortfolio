@@ -1,19 +1,14 @@
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa6";
-import GradientText from "./GradientText";
+// import GradientText from "./GradientText";
 
 export default function Contact() {
     return (
         <div>
            
-            <h1 className="text-3xl font-bold ">
-                 <GradientText
-  colors={["#5227FF","#FF9FFC","#B19EEF"]}
-  animationSpeed={8}
-  showBorder={false}
-  className="custom-class"
->
+            <h1 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-[#F39237] flex justify-center ">
+           
   Get In Touch
-</GradientText></h1>
+</h1>
         <div className="grid grid-cols-2 gap-4 py-4 px-5">
             <form action="https://formsubmit.co/your@email.com" method="POST">
              <input type="hidden" name="_captcha" value="false" />

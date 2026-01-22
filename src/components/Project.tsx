@@ -11,7 +11,10 @@ export function CardImage() {
   return (
 
     <div>
-        <h1 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-[#F39237]">My Projects</h1>
+        <h1 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-[#F39237] flex justify-center">My Projects</h1>
+
+                  <p className="text-base md:text-lg text-gray-700 leading-relaxed flex justify-center items-center py-3.5">These are the projects I have worked on. Check them out below.</p>
+
         <div className="grid grid-cols-3 rounded-lg gap-6 px-4 pt-2 pb-6">
       {/* Card 1 */}
       <Card className="relative mx-auto w-full max-w-sm pt-0 group overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-amber-400/20">
@@ -26,6 +29,8 @@ export function CardImage() {
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
         </div>
+
+        
         
         <CardHeader className="transition-all duration-300 group-hover:-translate-y-1">
           <CardAction>
