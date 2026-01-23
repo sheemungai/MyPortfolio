@@ -78,7 +78,7 @@ function App() {
         <div className="max-w-lg">
           <img
             className="rounded-lg"
-            src="src\assets\Download_premium_png_of_PNG_Laptop_computer_portrait_sitting__by_Busbus_about_curly-removebg-preview.png"
+            src="public/assets/Download_premium_png_of_PNG_Laptop_computer_portrait_sitting__by_Busbus_about_curly-removebg-preview.png"
             alt=" a laptop and aesthetic setup"
           />
         </div>
@@ -184,7 +184,7 @@ function App() {
         </div>
         <div className="order-1 md:order-2 flex justify-center">
           <img
-            src="src/assets/100_images_of_3D_characters_PNG_-_Transparent_Background-removebg-preview.png"
+            src="public/assets/100_images_of_3D_characters_PNG_-_Transparent_Background-removebg-preview.png"
             alt="a girl pointing to the right"
             className="w-full max-w-sm md:max-w-md h-auto"
           />
@@ -217,7 +217,7 @@ function App() {
             {/* Image with hover zoom effect */}
             <div className="relative z-20 aspect-video w-full overflow-hidden">
               <img
-                src="src/assets/Ethical AI and Predictive Analytics in Healthcare.jpg"
+                src="public/assets/Ethical AI and Predictive Analytics in Healthcare.jpg"
                 alt="Healthcare system"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
@@ -250,7 +250,7 @@ function App() {
 
             <div className="relative z-20 aspect-video w-full overflow-hidden">
               <img
-                src="src/assets/download (2).jpg"
+                src="public/assets/download (2).jpg"
                 alt="An E-Learning Platform"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
@@ -283,7 +283,7 @@ function App() {
 
             <div className="relative z-20 aspect-video w-full overflow-hidden">
               <img
-                src="src\assets\Portfolio 2024 - Juhi Dere.jpg"
+                src="public/assets/Portfolio 2024 - Juhi Dere.jpg"
                 alt="Personal Portfolio"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
