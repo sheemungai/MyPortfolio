@@ -9,6 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { useTheme } from "@/contexts/ThemeContext";
 import { createFileRoute } from "@tanstack/react-router";
 import { BiLogoTypescript } from "react-icons/bi";
 import { BsTwitterX } from "react-icons/bs";
@@ -31,11 +32,15 @@ export const Route = createFileRoute("/")({
 });
 
 function App() {
+  const { theme } = useTheme();
+
   return (
     <div>
       <div className="grid grid-cols-2">
         <div className="py-18 px-12 m-12">
           <h1 className="text-4xl font-bold text-black">
+                  <span style={{ color: theme === 'dark' ? 'white' : 'black' }}>
+
             <TextType
               text={[
                 "Hi 🖐️, I'm Sheilla Mungai.",
@@ -48,6 +53,7 @@ function App() {
               deletingSpeed={50}
               cursorBlinkDuration={0.5}
             />
+            </span>
           </h1>
           <p className="py-4 text-gray-600 max-w-md">Passionate developer</p>
 
@@ -414,14 +420,14 @@ function App() {
       </div>
 
       {/* Footer Section */}
-<footer className="bg-[#FF9FFC] text-gray-700 py-8 mt-12">
+<footer className="bg-amber-200 text-gray-700 py-8 mt-12">
   <div className="max-w-6xl mx-auto px-4">
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
       
       {/* About Section */}
       <div>
         <h3 className="text-xl font-bold mb-4 text-gray-800">Sheilla Mungai</h3>
-        <p className="text-gray-600">
+        <p className="text-gray-800">
           Fullstack Web Developer passionate about creating dynamic and user-friendly web applications.
         </p>
       </div>

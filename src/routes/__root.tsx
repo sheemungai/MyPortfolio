@@ -3,13 +3,15 @@ import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { TanStackDevtools } from '@tanstack/react-devtools'
 import Header from '@/components/Header'
 import Particles from '@/components/Particles'
+import { ThemeProvider } from '@/contexts/ThemeContext'
 
 
 
 
 export const Route = createRootRoute({
   component: () => (
-    <div className='relative min-h-screen'>
+    <ThemeProvider>
+      <div className='relative min-h-screen'>
       <Header />
      <Particles className="absolute inset-0 -z-10" />
       
@@ -28,5 +30,6 @@ export const Route = createRootRoute({
       />
       
     </div>
+    </ThemeProvider>
   ),
 })
