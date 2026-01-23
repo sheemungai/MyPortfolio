@@ -20,7 +20,7 @@ continuously learning new technologies to improve my skills."
       </div>
       <div className="order-1 md:order-2 flex justify-center">
         <img 
-          src="src/assets/100_images_of_3D_characters_PNG_-_Transparent_Background-removebg-preview.png" 
+          src="/assets/100_images_of_3D_characters_PNG_-_Transparent_Background-removebg-preview.png" 
           alt="a girl pointing to the right"
           className="w-full max-w-sm md:max-w-md h-auto"
         />

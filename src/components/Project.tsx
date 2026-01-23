@@ -24,7 +24,7 @@ export function CardImage() {
         {/* Image with hover zoom effect */}
         <div className="relative z-20 aspect-video w-full overflow-hidden">
           <img
-            src="src/assets/Ethical AI and Predictive Analytics in Healthcare.jpg"
+            src="/assets/Ethical AI and Predictive Analytics in Healthcare.jpg"
             alt="Healthcare system"
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
@@ -60,7 +60,7 @@ export function CardImage() {
         
         <div className="relative z-20 aspect-video w-full overflow-hidden">
           <img
-            src="src/assets/download (2).jpg"
+            src="/assets/download (2).jpg"
             alt="An E-Learning Platform"
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
@@ -93,7 +93,7 @@ export function CardImage() {
         
         <div className="relative z-20 aspect-video w-full overflow-hidden">
           <img
-            src="src\assets\Portfolio 2024 - Juhi Dere.jpg"
+            src="/assets/Portfolio 2024 - Juhi Dere.jpg"
             alt="Personal Portfolio"
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
