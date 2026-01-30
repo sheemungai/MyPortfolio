@@ -36,179 +36,245 @@ function App() {
 
   return (
     <div>
-      <div className="grid grid-cols-2">
-        <div className="py-18 px-12 m-12">
-          <h1 className="text-4xl font-bold text-black">
-                  <span style={{ color: theme === 'dark' ? 'white' : 'black' }}>
-
-            <TextType
-              text={[
-                "Hi 🖐️, I'm Sheilla Mungai.",
-                "A Fullstack Web Developer.",
-              ]}
-              typingSpeed={75}
-              pauseDuration={1500}
-              showCursor
-              cursorCharacter="_"
-              deletingSpeed={50}
-              cursorBlinkDuration={0.5}
-            />
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-center px-4 sm:px-6 md:px-12 py-8 md:py-12 max-w-7xl mx-auto">
+        <div className="order-2 lg:order-1">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black">
+            <span style={{ color: theme === "dark" ? "white" : "black" }}>
+              <TextType
+                text={[
+                  "Hi 🖐️, I'm Sheilla Mungai.",
+                  "A Fullstack Web Developer.",
+                ]}
+                typingSpeed={75}
+                pauseDuration={1500}
+                showCursor
+                cursorCharacter="_"
+                deletingSpeed={50}
+                cursorBlinkDuration={0.5}
+              />
             </span>
           </h1>
-          <p className="py-4 text-gray-600 max-w-md">Passionate developer</p>
+          <p className="py-4 text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-md">
+            Passionate developer creating innovative web solutions
+          </p>
 
-          <div className="px-6 py-7">
-            <button className="font-bold bg-amber-400 shadow-amber-200 rounded-lg p-1.5 hover:shadow-lg">
-              {" "}
+          <div className="py-4 md:py-6">
+            <button className="font-bold bg-amber-400 text-gray-900 shadow-amber-200 rounded-lg px-4 sm:px-6 py-2 sm:py-2.5 hover:shadow-lg hover:bg-amber-500 transition-all duration-300 transform hover:scale-105 text-sm sm:text-base">
               Download CV
             </button>
           </div>
-          <div className="display-flex space-x-4 flex flex-row px-6 py-4 text-2xl">
-            <a href="">
-              <FaSquareInstagram color="pink" />
-            </a>
-            <a href="https://www.linkedin.com/in/sheilla-mungai-80a8b9319/">
-              <FaLinkedin color="blue" />
-            </a>
-            <a href="">
-              <BsTwitterX />
-            </a>
+
+          {/* Let's Connect Section */}
+          <div className="mt-4">
+            <p className="text-base sm:text-lg font-semibold text-gray-700 dark:text-gray-300 mb-3">
+              Let's Connect
+            </p>
+            <div className="flex space-x-4 text-2xl sm:text-3xl">
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:scale-110 transition-transform duration-300"
+                aria-label="Instagram"
+              >
+                <FaSquareInstagram className="text-pink-500 hover:text-pink-600" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/sheilla-mungai-80a8b9319/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:scale-110 transition-transform duration-300"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedin className="text-blue-600 hover:text-blue-700" />
+              </a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:scale-110 transition-transform duration-300"
+                aria-label="Twitter"
+              >
+                <BsTwitterX className="text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300" />
+              </a>
+            </div>
           </div>
         </div>
-        <div className="max-w-lg">
+
+        <div className="order-1 lg:order-2 flex justify-center">
           <img
-            className="rounded-lg"
+            className="rounded-lg w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-auto"
             src="/assets/Download_premium_png_of_PNG_Laptop_computer_portrait_sitting__by_Busbus_about_curly-removebg-preview.png"
-            alt=" a laptop and aesthetic setup"
+            alt="A laptop and aesthetic setup"
           />
         </div>
       </div>
 
       {/* skills section */}
-      <div className="p-8">
-        <h1 className="text-3xl  md:text-4xl font-bold mb-4 md:mb-6 text-[#F39237] p-4 ml-7">
+      <div className="p-4 sm:p-6 md:p-8">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-[#F39237] flex justify-center text-center">
           <GradientText
-            colors={["#5227FF", "#FF9FFC", "#B19EEF"]}
-            animationSpeed={8}
-            showBorder={false}
-            className="custom-class"
-          >
-            My Skills
-          </GradientText>
+                  colors={["#ff6929","#FF9FFC","#f0d0a3"]}
+                  animationSpeed={8}
+                  showBorder={false}
+                  className="custom-class"
+                >          
+                My Skills
+                </GradientText>
         </h1>
 
-        <p className="text-base md:text-lg text-gray-700 leading-relaxed flex justify-center items-center py-3.5">
-          These are the skills am proficient in:
+        <p className="text-sm sm:text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed flex justify-center items-center py-3.5 text-center px-4">
+          These are the skills I'm proficient in:
         </p>
 
-        <div className="grid grid-cols-4 gap-6 max-w-6xl mx-auto">
-          <Card className="flex flex-col items-center justify-center p-6 hover:shadow-lg transition-shadow">
-            <CardHeader className="flex flex-col items-center space-y-4">
-              <FaFigma size={64} color="#5227FF" />
-              <CardTitle className="text-center">Figma</CardTitle>
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 max-w-6xl mx-auto">
+          <Card className="flex flex-col items-center justify-center p-3 sm:p-4 md:p-6 hover:shadow-lg transition-shadow">
+            <CardHeader className="flex flex-col items-center space-y-2 sm:space-y-3 md:space-y-4 p-2 sm:p-4">
+              <FaFigma
+                className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16"
+                color="#5227FF"
+              />
+              <CardTitle className="text-center text-sm sm:text-base md:text-lg">
+                Figma
+              </CardTitle>
             </CardHeader>
           </Card>
 
-          <Card className="flex flex-col items-center justify-center p-6 hover:shadow-lg transition-shadow">
-            <CardHeader className="flex flex-col items-center space-y-4">
-              <FaHtml5 size={64} color="#E34F26" />
-              <CardTitle className="text-center">HTML5</CardTitle>
+          <Card className="flex flex-col items-center justify-center p-3 sm:p-4 md:p-6 hover:shadow-lg transition-shadow">
+            <CardHeader className="flex flex-col items-center space-y-2 sm:space-y-3 md:space-y-4 p-2 sm:p-4">
+              <FaHtml5
+                className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16"
+                color="#E34F26"
+              />
+              <CardTitle className="text-center text-sm sm:text-base md:text-lg">
+                HTML5
+              </CardTitle>
             </CardHeader>
           </Card>
 
-          <Card className="flex flex-col items-center justify-center p-6 hover:shadow-lg transition-shadow">
-            <CardHeader className="flex flex-col items-center space-y-4">
-              <FaReact size={64} color="#61DAFB" />
-              <CardTitle className="text-center">React</CardTitle>
+          <Card className="flex flex-col items-center justify-center p-3 sm:p-4 md:p-6 hover:shadow-lg transition-shadow">
+            <CardHeader className="flex flex-col items-center space-y-2 sm:space-y-3 md:space-y-4 p-2 sm:p-4">
+              <FaReact
+                className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16"
+                color="#61DAFB"
+              />
+              <CardTitle className="text-center text-sm sm:text-base md:text-lg">
+                React
+              </CardTitle>
             </CardHeader>
           </Card>
 
-          <Card className="flex flex-col items-center justify-center p-6 hover:shadow-lg transition-shadow">
-            <CardHeader className="flex flex-col items-center space-y-4">
-              <FaPython size={64} color="#3776AB" />
-              <CardTitle className="text-center">Python</CardTitle>
+          <Card className="flex flex-col items-center justify-center p-3 sm:p-4 md:p-6 hover:shadow-lg transition-shadow">
+            <CardHeader className="flex flex-col items-center space-y-2 sm:space-y-3 md:space-y-4 p-2 sm:p-4">
+              <FaPython
+                className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16"
+                color="#3776AB"
+              />
+              <CardTitle className="text-center text-sm sm:text-base md:text-lg">
+                Python
+              </CardTitle>
             </CardHeader>
           </Card>
 
-          <Card className="flex flex-col items-center justify-center p-6 hover:shadow-lg transition-shadow">
-            <CardHeader className="flex flex-col items-center space-y-4">
-              <BiLogoTypescript size={64} color="#3178C6" />
-              <CardTitle className="text-center">TypeScript</CardTitle>
+          <Card className="flex flex-col items-center justify-center p-3 sm:p-4 md:p-6 hover:shadow-lg transition-shadow">
+            <CardHeader className="flex flex-col items-center space-y-2 sm:space-y-3 md:space-y-4 p-2 sm:p-4">
+              <BiLogoTypescript
+                className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16"
+                color="#3178C6"
+              />
+              <CardTitle className="text-center text-sm sm:text-base md:text-lg">
+                TypeScript
+              </CardTitle>
             </CardHeader>
           </Card>
 
-          <Card className="flex flex-col items-center justify-center p-6 hover:shadow-lg transition-shadow">
-            <CardHeader className="flex flex-col items-center space-y-4">
-              <DiPostgresql size={64} color="#336791" />
-              <CardTitle className="text-center">PostgreSQL</CardTitle>
+          <Card className="flex flex-col items-center justify-center p-3 sm:p-4 md:p-6 hover:shadow-lg transition-shadow">
+            <CardHeader className="flex flex-col items-center space-y-2 sm:space-y-3 md:space-y-4 p-2 sm:p-4">
+              <DiPostgresql
+                className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16"
+                color="#336791"
+              />
+              <CardTitle className="text-center text-sm sm:text-base md:text-lg">
+                PostgreSQL
+              </CardTitle>
             </CardHeader>
           </Card>
 
-          <Card className="flex flex-col items-center justify-center p-6 hover:shadow-lg transition-shadow">
-            <CardHeader className="flex flex-col items-center space-y-4">
-              <RiTailwindCssFill size={64} color="#38B2AC" />
-              <CardTitle className="text-center">Tailwind CSS</CardTitle>
+          <Card className="flex flex-col items-center justify-center p-3 sm:p-4 md:p-6 hover:shadow-lg transition-shadow">
+            <CardHeader className="flex flex-col items-center space-y-2 sm:space-y-3 md:space-y-4 p-2 sm:p-4">
+              <RiTailwindCssFill
+                className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16"
+                color="#38B2AC"
+              />
+              <CardTitle className="text-center text-sm sm:text-base md:text-lg">
+                Tailwind CSS
+              </CardTitle>
             </CardHeader>
           </Card>
 
-          <Card className="flex flex-col items-center justify-center p-6 hover:shadow-lg transition-shadow">
-            <CardHeader className="flex flex-col items-center space-y-4">
-              <FaCss3 size={64} color="#264DE4" />
-              <CardTitle className="text-center">CSS3</CardTitle>
+          <Card className="flex flex-col items-center justify-center p-3 sm:p-4 md:p-6 hover:shadow-lg transition-shadow">
+            <CardHeader className="flex flex-col items-center space-y-2 sm:space-y-3 md:space-y-4 p-2 sm:p-4">
+              <FaCss3
+                className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16"
+                color="#264DE4"
+              />
+              <CardTitle className="text-center text-sm sm:text-base md:text-lg">
+                CSS3
+              </CardTitle>
             </CardHeader>
           </Card>
         </div>
       </div>
 
       {/* about me section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center px-4 pt-2 pb-6 max-w-6xl mx-auto">
-        <div className="order-2 md:order-1">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-[#F39237]">
-            <GradientText
-              colors={["#5227FF", "#FF9FFC", "#B19EEF"]}
-              animationSpeed={8}
-              showBorder={false}
-              className="custom-class"
-            >
-              About me
-            </GradientText>
-          </h1>
-          <BlurText
-            text="Hi, I'm Sheilla Mungai, a passionate fullstack web developer.
-             I am a dedicated and skilled fullstack web developer with a for creating dynamic and user-friendly web applications. With expertise in both frontend and backend technologies, I strive to deliver seamless digital experiences that meet client needs and exceed expectations.I love coding and continuously learning new technologies to improve my skills."
-            delay={200}
-            animateBy="words"
-            direction="top"
-            className="text-base md:text-lg text-gray-700 leading-relaxed"
-          />
-        </div>
-        <div className="order-1 md:order-2 flex justify-center">
-          <img
-            src="/assets/100_images_of_3D_characters_PNG_-_Transparent_Background-removebg-preview.png"
-            alt="a girl pointing to the right"
-            className="w-full max-w-sm md:max-w-md h-auto"
-          />
-        </div>
-      </div>
+       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center px-4 sm:px-6 py-6 md:py-8 max-w-6xl mx-auto">
+            <div className="order-2 md:order-1">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-[#F39237]">
+                <GradientText
+                  colors={["#ff6929","#FF9FFC","#f0d0a3"]}
+                  animationSpeed={8}
+                  showBorder={false}
+                  className="custom-class"
+                >          
+                About Me
+                </GradientText>
+              </h1>
+              <BlurText
+                text="Hi, I'm Sheilla Mungai, a passionate fullstack web developer. I am a dedicated and skilled fullstack web developer with a passion for creating dynamic and user-friendly web applications. With expertise in both frontend and backend technologies, I strive to deliver seamless digital experiences that meet client needs and exceed expectations. I love coding and continuously learning new technologies to improve my skills."
+                delay={200}
+                animateBy="words"
+                direction="top"
+                className="text-sm sm:text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed"
+              />
+            </div>
+            <div className="order-1 md:order-2 flex justify-center">
+              <img
+                src="/assets/100_images_of_3D_characters_PNG_-_Transparent_Background-removebg-preview.png"
+                alt="a girl pointing to the right"
+                className="w-full max-w-xs sm:max-w-sm md:max-w-md h-auto"
+              />
+            </div>
+          </div>
 
       {/* project section */}
 
-      <div>
-        <h1 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-[#F39237] p-4 ml-7">
+      <div className="p-4 sm:p-6 md:p-8">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-[#F39237] flex justify-center text-center">
           <GradientText
-            colors={["#5227FF", "#FF9FFC", "#B19EEF"]}
-            animationSpeed={8}
-            showBorder={false}
-            className="custom-class"
-          >
-            My Projects
-          </GradientText>
+                  colors={["#ff6929","#FF9FFC","#f0d0a3"]}
+                  animationSpeed={8}
+                  showBorder={false}
+                  className="custom-class"
+                >          
+                My Projects
+                </GradientText>
         </h1>
-        <p className="text-base md:text-lg text-gray-700 leading-relaxed flex justify-center items-center py-3.5">
+
+        <p className="text-sm sm:text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed flex justify-center items-center py-3.5 text-center px-4">
           These are the projects I have worked on. Check them out below.
         </p>
 
-        <div className="grid grid-cols-3 rounded-lg gap-6 px-4 pt-2 pb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-lg gap-4 sm:gap-6 px-2 sm:px-4 pt-2 pb-6">
           {/* Card 1 */}
           <Card className="relative mx-auto w-full max-w-sm pt-0 group overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-amber-400/20">
             {/* Hover overlay effect */}
@@ -225,10 +291,10 @@ function App() {
 
             <CardHeader className="transition-all duration-300 group-hover:-translate-y-1">
               <CardAction></CardAction>
-              <CardTitle className="transition-colors duration-300 group-hover:text-amber-400">
-                Healthcare system
+              <CardTitle className="transition-colors duration-300 group-hover:text-amber-400 text-base sm:text-lg">
+                Healthcare System
               </CardTitle>
-              <CardDescription className="group-hover:text-gray-200 transition-colors duration-300">
+              <CardDescription className="group-hover:text-gray-200 transition-colors duration-300 text-sm sm:text-base">
                 A web application that connects patients with healthcare
                 providers, allowing for easy appointment scheduling, medical
                 record management, and telehealth consultations.
@@ -237,7 +303,9 @@ function App() {
             <CardFooter>
               <a
                 href="https://github.com/sheemungai/MyHealthCareApp"
-                className="bg-amber-400 text-black rounded-lg p-2 px-4 font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-amber-400/30 hover:bg-amber-300"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-amber-400 text-black rounded-lg p-2 px-4 font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-amber-400/30 hover:bg-amber-300 text-sm sm:text-base"
               >
                 View Code
               </a>
@@ -258,19 +326,21 @@ function App() {
 
             <CardHeader className="transition-all duration-300 group-hover:-translate-y-1">
               <CardAction></CardAction>
-              <CardTitle className="transition-colors duration-300 group-hover:text-amber-400">
-                An E-Learning Platform
+              <CardTitle className="transition-colors duration-300 group-hover:text-amber-400 text-base sm:text-lg">
+                E-Learning Platform
               </CardTitle>
-              <CardDescription className="group-hover:text-gray-200 transition-colors duration-300">
+              <CardDescription className="group-hover:text-gray-200 transition-colors duration-300 text-sm sm:text-base">
                 A web application that offers online courses, interactive
-                quizzes, and progress tracking for learners.It is also
-                intergrated with Mpesa payment system for easy course purchases.
+                quizzes, and progress tracking for learners. It is also
+                integrated with Mpesa payment system for easy course purchases.
               </CardDescription>
             </CardHeader>
             <CardFooter>
               <a
                 href="https://github.com/sheemungai/E-Learning"
-                className="bg-amber-400 text-black rounded-lg p-2 px-4 font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-amber-400/30 hover:bg-amber-300"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-amber-400 text-black rounded-lg p-2 px-4 font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-amber-400/30 hover:bg-amber-300 text-sm sm:text-base"
               >
                 View Code
               </a>
@@ -291,10 +361,10 @@ function App() {
 
             <CardHeader className="transition-all duration-300 group-hover:-translate-y-1">
               <CardAction></CardAction>
-              <CardTitle className="transition-colors duration-300 group-hover:text-amber-400">
+              <CardTitle className="transition-colors duration-300 group-hover:text-amber-400 text-base sm:text-lg">
                 Personal Portfolio
               </CardTitle>
-              <CardDescription className="group-hover:text-gray-200 transition-colors duration-300">
+              <CardDescription className="group-hover:text-gray-200 transition-colors duration-300 text-sm sm:text-base">
                 A personal portfolio website showcasing my projects, skills, and
                 experience as a fullstack web developer.
               </CardDescription>
@@ -302,7 +372,9 @@ function App() {
             <CardFooter>
               <a
                 href="https://github.com/sheemungai/MyPortfolio"
-                className="bg-amber-400 text-black rounded-lg p-2 px-4 font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-amber-400/30 hover:bg-amber-300"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-amber-400 text-black rounded-lg p-2 px-4 font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-amber-400/30 hover:bg-amber-300 text-sm sm:text-base"
               >
                 View Code
               </a>
@@ -312,19 +384,25 @@ function App() {
       </div>
 
       {/* contact section */}
-      <div>
-        <h1 className="text-3xl font-bold  md:text-4xl mb-4 md:mb-6 text-[#F39237] p-4 ml-7">
+      <div className="p-4 sm:p-6 md:p-8">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-[#F39237] flex justify-center text-center">
           <GradientText
-            colors={["#5227FF", "#FF9FFC", "#B19EEF"]}
-            animationSpeed={8}
-            showBorder={false}
-            className="custom-class"
-          >
-            Get In Touch
-          </GradientText>
+                  colors={["#ff6929","#FF9FFC","#f0d0a3"]}
+                  animationSpeed={8}
+                  showBorder={false}
+                  className="custom-class"
+                >          
+                Get In Touch
+                </GradientText>
         </h1>
-        <div className="grid grid-cols-2 gap-4 py-4 px-5">
-          <form action="https://formsubmit.co/your@email.com" method="POST">
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 py-4 px-2 sm:px-4 md:px-5 max-w-6xl mx-auto">
+          {/* Contact Form */}
+          <form
+            action="https://formsubmit.co/your@email.com"
+            method="POST"
+            className="bg-white dark:bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg"
+          >
             <input type="hidden" name="_captcha" value="false" />
             <input
               type="hidden"
@@ -333,85 +411,105 @@ function App() {
             />
 
             <div className="mb-4">
-              <label className="block text-gray-700 mb-2">Name</label>
+              <label className="block text-gray-700 dark:text-gray-300 mb-2 text-sm sm:text-base font-medium">
+                Name
+              </label>
               <input
                 type="text"
                 name="name"
                 required
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300"
+                className="w-full px-3 sm:px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400 dark:bg-gray-700 dark:text-white text-sm sm:text-base"
+                placeholder="Your name"
               />
             </div>
 
             <div className="mb-4">
-              <label className="block text-gray-700 mb-2">Email</label>
+              <label className="block text-gray-700 dark:text-gray-300 mb-2 text-sm sm:text-base font-medium">
+                Email
+              </label>
               <input
                 type="email"
                 name="email"
                 required
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300"
+                className="w-full px-3 sm:px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400 dark:bg-gray-700 dark:text-white text-sm sm:text-base"
+                placeholder="your@email.com"
               />
             </div>
 
             <div className="mb-4">
-              <label className="block text-gray-700 mb-2">Message</label>
+              <label className="block text-gray-700 dark:text-gray-300 mb-2 text-sm sm:text-base font-medium">
+                Message
+              </label>
               <textarea
                 name="message"
                 required
                 rows={5}
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300"
+                className="w-full px-3 sm:px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400 dark:bg-gray-700 dark:text-white text-sm sm:text-base resize-none"
+                placeholder="Your message here..."
               ></textarea>
             </div>
 
             <button
               type="submit"
-              className="w-full bg-amber-400 text-gray-700 font-semibold py-2 rounded-lg hover:bg-amber-500 transition"
+              className="w-full bg-amber-400 text-gray-900 font-semibold py-2.5 sm:py-3 rounded-lg hover:bg-amber-500 transition-all duration-300 transform hover:scale-[1.02] text-sm sm:text-base"
             >
               Send Message
             </button>
           </form>
 
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h2 className="text-2xl font-semibold mb-4">Contact Information</h2>
+          {/* Contact Information */}
+          <div className="bg-white dark:bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg">
+            <h2 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-gray-900 dark:text-white">
+              Contact Information
+            </h2>
 
-            <div className="space-y-4">
+            <div className="space-y-4 sm:space-y-6">
               <div>
-                <h3 className="font-semibold text-gray-700">
-                  {" "}
-                  <FaEnvelope color="red" />
-                  Email
-                </h3>
-                <p className="text-pink-600">mungaisheilla20@gmail.com</p>
+                <div className="flex items-center gap-2 mb-2">
+                  <FaEnvelope className="text-red-500 w-5 h-5 sm:w-6 sm:h-6" />
+                  <h3 className="font-semibold text-gray-700 dark:text-gray-300 text-sm sm:text-base">
+                    Email
+                  </h3>
+                </div>
+                <a
+                  href="mailto:mungaisheilla20@gmail.com"
+                  className="text-amber-600 dark:text-amber-400 hover:underline text-sm sm:text-base break-all"
+                >
+                  mungaisheilla20@gmail.com
+                </a>
               </div>
 
               <div>
-                <h3 className="font-semibold text-gray-700">
-                  {" "}
-                  <FaGithub color="black" />
-                  GitHub
-                </h3>
+                <div className="flex items-center gap-2 mb-2">
+                  <FaGithub className="text-gray-900 dark:text-white w-5 h-5 sm:w-6 sm:h-6" />
+                  <h3 className="font-semibold text-gray-700 dark:text-gray-300 text-sm sm:text-base">
+                    GitHub
+                  </h3>
+                </div>
                 <a
                   href="https://github.com/sheemungai"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-pink-600 hover:underline"
+                  className="text-amber-600 dark:text-amber-400 hover:underline text-sm sm:text-base break-all"
                 >
                   github.com/sheemungai
                 </a>
               </div>
 
               <div>
-                <h3 className="font-semibold text-gray-700">
-                  {" "}
-                  <FaLinkedin color="blue" />
-                  LinkedIn
-                </h3>
+                <div className="flex items-center gap-2 mb-2">
+                  <FaLinkedin className="text-blue-600 dark:text-blue-400 w-5 h-5 sm:w-6 sm:h-6" />
+                  <h3 className="font-semibold text-gray-700 dark:text-gray-300 text-sm sm:text-base">
+                    LinkedIn
+                  </h3>
+                </div>
                 <a
                   href="https://www.linkedin.com/in/sheilla-mungai-80a8b9319"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-pink-600 hover:underline"
+                  className="text-amber-600 dark:text-amber-400 hover:underline text-sm sm:text-base break-all"
                 >
-                  www.linkedin.com/in/sheilla-mungai-80a8b9319
+                  linkedin.com/in/sheilla-mungai-80a8b9319
                 </a>
               </div>
             </div>
@@ -420,74 +518,109 @@ function App() {
       </div>
 
       {/* Footer Section */}
-<footer className="bg-amber-200 text-gray-700 py-8 mt-12">
-  <div className="max-w-6xl mx-auto px-4">
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-      
-      {/* About Section */}
-      <div>
-        <h3 className="text-xl font-bold mb-4 text-gray-800">Sheilla Mungai</h3>
-        <p className="text-gray-800">
-          Fullstack Web Developer passionate about creating dynamic and user-friendly web applications.
-        </p>
-      </div>
+      <footer className="bg-amber-200 text-gray-700 py-8 mt-12">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* About Section */}
+            <div>
+              <h3 className="text-xl font-bold mb-4 text-gray-800">
+                Sheilla Mungai
+              </h3>
+              <p className="text-gray-800">
+                Fullstack Web Developer passionate about creating dynamic and
+                user-friendly web applications.
+              </p>
+            </div>
 
-      {/* Quick Links */}
-      <div>
-        <h3 className="text-xl font-bold mb-4 text-gray-800">Quick Links</h3>
-        <ul className="space-y-2">
-          <li>
-            <a href="/" className="hover:text-amber-400 transition">Home</a>
-          </li>
-          <li>
-            <a href="/skill" className="hover:text-amber-400 transition">Skills</a>
-          </li>
-          <li>
-            <a href="/about" className="hover:text-amber-400 transition">About</a>
-          </li>
-          <li>
-            <a href="/project" className="hover:text-amber-400 transition">Projects</a>
-          </li>
-          <li>
-            <a href="/contact" className="hover:text-amber-400 transition">Contact</a>
-          </li>
-        </ul>
-      </div>
+            {/* Quick Links */}
+            <div>
+              <h3 className="text-xl font-bold mb-4 text-gray-800">
+                Quick Links
+              </h3>
+              <ul className="space-y-2">
+                <li>
+                  <a href="/" className="hover:text-amber-400 transition">
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a href="/skill" className="hover:text-amber-400 transition">
+                    Skills
+                  </a>
+                </li>
+                <li>
+                  <a href="/about" className="hover:text-amber-400 transition">
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/project"
+                    className="hover:text-amber-400 transition"
+                  >
+                    Projects
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/contact"
+                    className="hover:text-amber-400 transition"
+                  >
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
 
-      {/* Social Links */}
-      <div>
-        <h3 className="text-xl font-bold mb-4 text-gray-800">Connect With Me</h3>
-        <div className="flex space-x-4 text-2xl">
-          <a href="https://github.com/sheemungai" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition">
-            <FaGithub />
-          </a>
-          <a href="https://www.linkedin.com/in/sheilla-mungai-80a8b9319/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition">
-            <FaLinkedin color="blue" />
-          </a>
-          <a href="" className="hover:text-amber-400 transition">
-            <FaSquareInstagram color="pink" />
-          </a>
-          <a href="" className="hover:text-amber-400 transition">
-            <BsTwitterX />
-          </a>
+            {/* Social Links */}
+            <div>
+              <h3 className="text-xl font-bold mb-4 text-gray-800">
+                Connect With Me
+              </h3>
+              <div className="flex space-x-4 text-2xl">
+                <a
+                  href="https://github.com/sheemungai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-amber-400 transition"
+                >
+                  <FaGithub />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/sheilla-mungai-80a8b9319/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-amber-400 transition"
+                >
+                  <FaLinkedin color="blue" />
+                </a>
+                <a href="" className="hover:text-amber-400 transition">
+                  <FaSquareInstagram color="pink" />
+                </a>
+                <a href="" className="hover:text-amber-400 transition">
+                  <BsTwitterX />
+                </a>
+              </div>
+              <div className="mt-4">
+                <a
+                  href="mailto:mungaisheilla20@gmail.com"
+                  className="flex items-center space-x-2 hover:text-amber-400 transition"
+                >
+                  <FaEnvelope color="red" />
+                  <span>mungaisheilla20@gmail.com</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Copyright */}
+          <div className="border-t border-gray-400 mt-8 pt-6 text-center">
+            <p className="text-gray-600">
+              © {new Date().getFullYear()} Sheilla Mungai. All rights reserved.
+            </p>
+          </div>
         </div>
-        <div className="mt-4">
-          <a href="mailto:mungaisheilla20@gmail.com" className="flex items-center space-x-2 hover:text-amber-400 transition">
-            <FaEnvelope color="red" />
-            <span>mungaisheilla20@gmail.com</span>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    {/* Copyright */}
-    <div className="border-t border-gray-400 mt-8 pt-6 text-center">
-      <p className="text-gray-600">
-        © {new Date().getFullYear()} Sheilla Mungai. All rights reserved.
-      </p>
-    </div>
-  </div>
-</footer>
+      </footer>
     </div>
   );
 }
